@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutterkage2kmoney231017/data/listdata.dart';
+import 'package:flutterkage2kmoney231017/widgets/bottomnavigator.dart';
 
 class Home extends StatelessWidget {
   const Home({super.key});

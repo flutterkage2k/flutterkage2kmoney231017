@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutterkage2kmoney231017/pages/add.dart';
 import 'package:flutterkage2kmoney231017/pages/home.dart';
 import 'package:flutterkage2kmoney231017/pages/statistics.dart';
 
@@ -18,7 +19,13 @@ class _BottomState extends State<Bottom> {
     return Scaffold(
       body: Screen[index_color],
       floatingActionButton: FloatingActionButton(
-        onPressed: () {},
+        onPressed: () {
+          Navigator.of(context).push(
+            MaterialPageRoute(
+              builder: (_) => AddScreen(),
+            ),
+          );
+        },
         child: Icon(Icons.add),
         backgroundColor: Color(0xff368983),
       ),
@@ -28,7 +35,7 @@ class _BottomState extends State<Bottom> {
         child: Padding(
           padding: const EdgeInsets.only(top: 7.5, bottom: 7.5),
           child: Row(
-            mainAxisAlignment: MainAxisAlignment.spaceBetween,
+            mainAxisAlignment: MainAxisAlignment.spaceAround,
             children: [
               GestureDetector(
                 onTap: () {
@@ -39,7 +46,7 @@ class _BottomState extends State<Bottom> {
                 child: Icon(
                   Icons.home,
                   size: 30,
-                  color: index_color == 0 ? Color(0xff368983) : Colors.white,
+                  color: index_color == 0 ? Color(0xff368983) : Colors.grey,
                 ),
               ),
               GestureDetector(
@@ -51,7 +58,7 @@ class _BottomState extends State<Bottom> {
                 child: Icon(
                   Icons.bar_chart_outlined,
                   size: 30,
-                  color: index_color == 0 ? Color(0xff368983) : Colors.white,
+                  color: index_color == 1 ? Color(0xff368983) : Colors.grey,
                 ),
               ),
               SizedBox(
@@ -66,7 +73,7 @@ class _BottomState extends State<Bottom> {
                 child: Icon(
                   Icons.account_balance_wallet_outlined,
                   size: 30,
-                  color: index_color == 0 ? Color(0xff368983) : Colors.white,
+                  color: index_color == 2 ? Color(0xff368983) : Colors.grey,
                 ),
               ),
               GestureDetector(
@@ -78,7 +85,7 @@ class _BottomState extends State<Bottom> {
                 child: Icon(
                   Icons.person_outlined,
                   size: 30,
-                  color: index_color == 0 ? Color(0xff368983) : Colors.white,
+                  color: index_color == 3 ? Color(0xff368983) : Colors.grey,
                 ),
               ),
             ],
